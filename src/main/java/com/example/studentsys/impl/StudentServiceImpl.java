@@ -2,19 +2,18 @@ package com.example.studentsys.impl;
 
 import com.example.studentsys.model.Student;
 import com.example.studentsys.repository.StudentRepository;
-import com.example.studentsys.service.Studentservice;
+import com.example.studentsys.service.StudentService;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-import java.beans.Transient;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
 @Primary
-public class StudentServiceImpl implements Studentservice {
+public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository repository;
 

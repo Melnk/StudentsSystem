@@ -8,7 +8,7 @@ import java.time.*;
 
 @Data //Содержит все нужны аннотации (Getter, Setter, Constructor)
 @Entity
-@Table(name = "students")
+@Table(name = "students")   
 public class Student {
     @Id
     @GeneratedValue

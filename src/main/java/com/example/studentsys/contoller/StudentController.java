@@ -1,9 +1,8 @@
 package com.example.studentsys.contoller;
 
 import com.example.studentsys.model.Student;
-import com.example.studentsys.service.Studentservice;
+import com.example.studentsys.service.StudentService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,7 @@ import java.util.*;
 public class StudentController {
 
     @Qualifier("")
-    private Studentservice service;
+    private StudentService service;
 
     @GetMapping
     public List<Student> findAllStudent(){
@@ -23,7 +22,7 @@ public class StudentController {
         return service.findAllStudents();
     }
 
-    @PostMapping("save_student")
+    @PostMapping("save")
     public Student saveStudent(@RequestBody Student student){
         return service.saveStudent(student);
     }
@@ -38,7 +37,7 @@ public class StudentController {
         return service.updateStudent(student);
     }
 
-    @DeleteMapping("delete_student/{email}")
+    @DeleteMapping("delete/{email}")
     public void deleteStudent(@PathVariable String email){
         service.deleteStudent(email);
     }
