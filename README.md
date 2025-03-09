@@ -47,10 +47,10 @@ mvn spring-boot:run
 | Метод | URL | Описание |
 |--------|-------------------------|------------------------------|
 | GET | `/api/v1/students` | Получить список всех студентов |
-| POST | `/api/v1/students/save_student` | Добавить нового студента |
+| POST | `/api/v1/students/save` | Добавить нового студента |
 | GET | `/api/v1/students/{email}` | Найти студента по email |
 | PUT | `/api/v1/students/update_student` | Обновить данные студента |
-| DELETE | `/api/v1/students/delete_student/{email}` | Удалить студента |
+| DELETE | `/api/v1/students/delete/{email}` | Удалить студента |
 
 ## 📸 Скриншоты
 ![image](https://github.com/user-attachments/assets/c348e667-9b6e-4b77-aa5f-573208d76ec6)
